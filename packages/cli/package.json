@@ -1,0 +1,15 @@
+{
+  "name": "@dayztools/cli",
+  "version": "0.1.0",
+  "type": "commonjs",
+  "bin": {
+    "dayztools": "bin/dayztools.js"
+  },
+  "dependencies": {
+    "@dayztools/core": "0.1.0",
+    "commander": "^11.1.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
