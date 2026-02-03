@@ -144,9 +144,32 @@ button:disabled {
   box-shadow: none;
 }
 
+.side {
+  display: grid;
+  gap: 16px;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
 .card h2 {
   margin: 0 0 12px;
   font-size: 18px;
+}
+
+.card-header h2 {
+  margin: 0;
+}
+
+.card p {
+  margin: 0;
+  color: #b7c0c7;
+  line-height: 1.5;
 }
 
 .card ol {
@@ -154,6 +177,20 @@ button:disabled {
   color: #b7c0c7;
   line-height: 1.6;
   margin-bottom: 16px;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: rgba(216, 195, 161, 0.16);
+  border: 1px solid rgba(216, 195, 161, 0.3);
+  color: #d8c3a1;
 }
 
 .status {
@@ -228,8 +265,16 @@ button:disabled {
   padding: 16px;
 }
 
+.preview-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
 .preview h3 {
-  margin: 0 0 12px;
+  margin: 0;
   font-size: 16px;
 }
 
@@ -246,6 +291,23 @@ button:disabled {
   max-height: 260px;
   overflow: auto;
 }
+
+.xml-preview .xml-decl {
+  color: #c792ea;
+}
+
+.xml-preview .xml-tag {
+  color: #82aaff;
+}
+
+.xml-preview .xml-attr {
+  color: #c3e88d;
+}
+
+.xml-preview .xml-value {
+  color: #f78c6c;
+}
+
 
 @media (max-width: 900px) {
   .hero {

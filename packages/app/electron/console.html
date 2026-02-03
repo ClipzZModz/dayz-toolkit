@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DayZ Tools Console</title>
+    <style>
+      :root {
+        font-family: "Consolas", "Courier New", monospace;
+        color: #e6edf3;
+        background: #0f1114;
+      }
+
+      body {
+        margin: 0;
+        padding: 16px;
+      }
+
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 12px;
+      }
+
+      h1 {
+        font-size: 16px;
+        margin: 0;
+      }
+
+      button {
+        background: transparent;
+        color: #e6edf3;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 6px;
+        padding: 6px 10px;
+        cursor: pointer;
+      }
+
+      #log {
+        background: #0b0d10;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 8px;
+        padding: 10px;
+        height: 60vh;
+        overflow: auto;
+        font-size: 12px;
+      }
+
+      .line {
+        display: grid;
+        grid-template-columns: 56px 170px 1fr;
+        gap: 10px;
+        padding: 4px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      }
+
+      .line:last-child {
+        border-bottom: none;
+      }
+
+      .time {
+        color: #6e7c86;
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 18px;
+        border-radius: 6px;
+        font-size: 10px;
+        padding: 0 6px;
+        letter-spacing: 0.05em;
+        background: rgba(255, 255, 255, 0.08);
+        color: #e6edf3;
+        text-transform: uppercase;
+      }
+
+      .badge-info {
+        background: rgba(130, 170, 255, 0.18);
+        color: #9db7ff;
+      }
+
+      .badge-dir {
+        background: rgba(195, 232, 141, 0.18);
+        color: #c3e88d;
+      }
+
+      .badge-cmd {
+        background: rgba(247, 140, 108, 0.18);
+        color: #f78c6c;
+      }
+
+      .badge-out {
+        background: rgba(106, 209, 139, 0.18);
+        color: #6ad18b;
+      }
+
+      .badge-err {
+        background: rgba(255, 107, 107, 0.2);
+        color: #ff6b6b;
+      }
+
+      .message {
+        white-space: pre-wrap;
+        word-break: break-word;
+      }
+
+      .input {
+        margin-top: 12px;
+        display: flex;
+        gap: 8px;
+      }
+
+      .input input {
+        flex: 1;
+        background: #0b0d10;
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        border-radius: 6px;
+        color: #e6edf3;
+        padding: 8px 10px;
+        font-size: 12px;
+      }
+
+      .empty {
+        color: #6e7c86;
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>DayZ Tools Console</h1>
+      <button id="clear">Clear</button>
+    </header>
+    <div id="log">
+      <div class="empty" id="empty">No logs yet.</div>
+    </div>
+    <div class="input">
+      <input id="command" type="text" placeholder="dayztools scan <typesFolder>" />
+      <button id="run">Run</button>
+    </div>
+    <script src="console.js"></script>
+  </body>
+</html>
